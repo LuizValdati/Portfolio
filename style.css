@@ -127,9 +127,20 @@ main {
     padding-top: 60%;
     margin-bottom: 15px;
     border: 1px solid #00FF00;
-    background-image: url('');
     background-size: cover;
     background-position: center;
+}
+
+.projeto1 {
+    background-image: url('img/DescubraSC.png');
+}
+
+.projeto2 {
+    background-image: url('img/Yeti.png');
+}
+
+.projeto3 {
+    background-image: url('img/TGOJS.png');
 }
 
 #projetos article h3 {

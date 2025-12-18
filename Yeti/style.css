@@ -1,0 +1,231 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0B1D26; /* Cor de fundo escura, como no original */
+    color: #FFFFFF;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #FBD784;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 1000;
+}
+
+.header .container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 30px;
+}
+
+.nav a {
+    margin-left: 30px;
+    color: #FFFFFF;
+}
+
+.account a {
+    margin-left: 30px;
+}
+
+/* Seção Hero (Topo) */
+.hero {
+    /* Define a imagem de fundo e garante que ela cubra a área */
+    background: url('img/fundo.jpg') no-repeat center center/cover;
+    height: 100vh; /* Ocupa a altura total da viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    /* Adiciona um gradiente escuro na imagem para melhorar a legibilidade */
+    /* Não é o gradiente exato, mas simula o escurecimento do fundo */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
+}
+
+.hero-content {
+    max-width: 600px;
+    padding-top: 250px; /* Espaço para descer o conteúdo e simular o layout do topo */
+}
+
+.hero h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.hero .read-more {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Seções de Conteúdo (01, 02, 03) */
+
+.content-section {
+    padding: 100px 0;
+}
+
+/* Colunas - Usando Float */
+.float-left {
+    float: left;
+    width: 48%; /* Quase metade, deixando margem */
+}
+
+.float-right-images {
+    float: right;
+    width: 48%;
+}
+
+.content-image {
+    /* Define as imagens para as colunas */
+    min-height: 500px; /* Altura mínima para visualização */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px; /* Arredondamento suave */
+}
+
+/* Imagens Específicas para Cada Seção */
+.section-one .content-image {
+    background-image: url('img/tecnologia.avif'); 
+}
+
+.section-two .content-image {
+    background-image: url('img/dimensão.avif'); 
+}
+
+.section-three .content-image {
+    background-image: url('img/relação.jpg'); 
+}
+
+.content-text {
+    padding: 50px 0; /* Padding interno */
+    position: relative; /* Necessário para posicionar o número sobreposto */
+}
+
+.tagline {
+    color: #FBD784;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Estilo para os números grandes (01, 02, 03) */
+.section-number {
+    position: absolute;
+    top: -100px; /* Move para cima */
+    left: 0;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.1); /* Cor clara e transparente */
+    font-weight: bold;
+    z-index: -1; /* Manda para trás do texto */
+}
+
+.content-text h2 {
+    font-size: 60px;
+    margin: 20px 0;
+}
+
+.content-text .read-more {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #0B1D26; 
+    padding: 80px 0 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .container {
+    /* Garante que o conteúdo centralizado use a classe clearfix */
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.footer-info {
+    width: 40%;
+}
+
+.footer-social {
+    /* Coluna Direita - Largura menor para os links sociais */
+    width: 40%;
+    text-align: right; /* Alinha o texto (e os links) à direita */
+}
+
+/* Reset para o Logo */
+.footer-info .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+/* Estilo para Título de Contato */
+.footer-social h3 {
+    color: #FBD784; /* Cor de destaque */
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.social-links .social-icon {
+    display: inline-block; /* Permite espaçamento e alinhamento */
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-left: 20px;
+    /* Você pode adicionar um ícone via background-image ou ::before aqui, se quiser */
+}
+
+.social-links .social-icon:hover {
+    color: #FBD784;
+}
+
+/* Copyright */
+.copyright {
+    margin-top: 50px; /* Mais espaço acima para não ficar grudado */
+    font-size: 14px;
+}

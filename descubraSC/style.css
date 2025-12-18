@@ -1,0 +1,272 @@
+/*
+ * 1. Estilos Globais e Reset Simples
+ */
+:root {
+    --color-dark: #000;
+    --color-light: #fff;
+    --color-gray: #ccc;
+    --font-family-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    text-align: center;
+}
+
+a {
+    color: var(--color-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-gray);
+}
+
+h2, h3 {
+    margin-bottom: 0.5em;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+.hero-section {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.7) 100%),
+                      url('img/trilha.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 30px;
+}
+
+.icon-center {
+    font-size: 1.5rem; 
+    padding: 0;
+    margin: 0 50px; 
+}
+
+.search-link {
+    font-weight: bold;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.explore-section {
+    padding: 80px 50px;
+}
+
+.section-description {
+    max-width: 600px;
+    margin: 10px auto 40px auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--color-gray);
+}
+
+.location-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 300px; 
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.3s ease-out;
+}
+
+.bombinhas {
+    background-image: url('img/bombinhas.webp');
+}
+
+.cachoeira-do-encontro {
+    background-image: url('img/cachoeira-do-encontro.webp');
+}
+
+.rota-das-cachoeiras {
+    background-image: url('img/rota-das-cachoeiras.webp');
+}
+
+.card-overlay {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-overlay h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.card-overlay p {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+.see-more-link {
+    border: 1px solid var(--color-light);
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.see-more-link:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.journal-section {
+    padding: 80px 50px;
+    background-color: #0c0c0c;
+}
+
+.journal-posts {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.post {
+    width: 450px;
+    text-align: left;
+}
+
+.post-image-container {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.yosemite {
+    background-image: url('img/canion.jpg');
+}
+
+.bridge {
+    background-image: url('img/serra.webp');
+}
+
+.post-info {
+    padding: 0 10px;
+}
+
+.post-date {
+    font-size: 0.7rem;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.post-info h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.post-excerpt {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+.all-posts-link {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/*
+ * 5. Estilos do Rodapé
+ */
+.footer {
+    background-size: cover;
+    background-position: bottom;
+    padding: 50px 50px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 0.7rem;
+    color: var(--color-gray);
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+}
