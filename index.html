@@ -12,7 +12,7 @@
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Navegação Principal">
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -26,8 +26,9 @@
 
         <section id="sobre">
             <div>
-                <div class="imagem-perfil"></div>
-                <h1>Luiz Angelo Tramontin Valdati</h1>
+                <div class="imagem-perfil" role="img" aria-label="Foto de perfil de Luiz Angelo Tramontin Valdati">
+                </div>
+                <h1 id="perfil-titulo">Luiz Angelo Tramontin Valdati</h1>
 
             </div>
 
@@ -35,15 +36,17 @@
                 <h2>Resumo Profissional</h2>
                 <ul class="ul-vertical">
                     <li>Profissional de TI com experiência em suporte a sistemas ERP e PDV, atuando com SQL, automação
-                        de processos e análise de dados. Estudante de TIC na UFSC, em transição para desenvolvimento de
-                        software e soluções web.</li>
+                        de processos e análise de dados. Aspirante a desenvolvedor pela Alpha EdTech. Em transição para
+                        desenvolvimento de software e soluções web.</li>
 
                 </ul>
-                <section>
-                    <h2>Informações Chave</h2>
-                    <ul>
-                        <li>Palavras chaves</li>
-                        <li>tecnologias</li>
+                <section aria-labelledby="tecnologias-titulo">
+                    <h2 id="tecnologias-titulo">Tecnologias e Ferramentas</h2>
+                    <ul class="tecnologias">
+                        <li><i class="fa-brands fa-git-alt" aria-label="Git"></i></li>
+                        <li><i class="fa-brands fa-html5" aria-label="HTML5"></i></li>
+                        <li><i class="fa-brands fa-css3-alt" aria-label="CSS3"></i></li>
+                        <li><i class="fa-brands fa-square-figma" aria-label="Figma"></i></li>
                     </ul>
                 </section>
             </section>
@@ -54,7 +57,8 @@
 
             <div>
                 <article>
-                    <a href="descubraSC/index.html" target="_blank">
+                    <a href="descubraSC/index.html" target="_blank"
+                        aria-label="Ver Projeto Descubra SC - Landing page para turismo catarinense">
 
                         <div class="projeto1"></div>
                         <h3><i class="fa-brands fa-css3-alt"></i>
@@ -65,17 +69,19 @@
                 </article>
 
                 <article>
-                    <a href="Yeti/Yeti.html" target="_blank">
+                    <a href="Yeti/Yeti.html" target="_blank"
+                        aria-label="Ver Projeto Yeti - Landing page para marca de ciclismo">
                         <div class="projeto2"></div>
                         <h3><i class="fa-brands fa-css3-alt"></i>
                             <i class="fa-brands fa-html5"></i>
                         </h3>
-                        <p>Landing page marca de ciclismo</p>
+                        <p>Landing page para marca de ciclismo</p>
                     </a>
                 </article>
 
                 <article>
-                    <a href="TheGreatOutDoorsJS/index.html" target="_blank">
+                    <a href="TheGreatOutDoorsJS/index.html" target="_blank"
+                        aria-label="Ver Projeto The Great Outdoors - Landing page com JavaScript">
                         <div class="projeto3"></div>
                         <h3><i class="fa-brands fa-css3-alt"></i>
                             <i class="fa-brands fa-html5"></i>
@@ -92,9 +98,12 @@
     <footer id="contato">
         <h2>Contatos</h2>
         <div>
-            <a href="mailto:seuemail@exemplo.com"><i class="fa-regular fa-envelope"></i></a>
-            <a href="link-para-github"><i class="fa-brands fa-square-github"></i></a>
-            <a href="link-para-linkedin"><i class="fa-brands fa-square-linkedin"></i></a>
+            <a href="mailto:valdatiluiz@gmail.com" aria-label="Enviar email para valdatiluiz@gmail.com"><i
+                    class="fa-regular fa-envelope"></i></a>
+            <a href="https://github.com/LuizValdati" target="_blank" aria-label="Perfil do GitHub"><i
+                    class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.linkedin.com/in/luiz-angelo-valdati/" target="_blank"
+                aria-label="Perfil do LinkedIn"><i class="fa-brands fa-square-linkedin"></i></a>
         </div>
         <p>&copy; 2025 Luiz Angelo Valdati</p>
     </footer>
