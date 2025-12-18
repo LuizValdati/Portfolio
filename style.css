@@ -7,6 +7,14 @@ body {
     min-height: 100vh;
 }
 
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
 a {
     text-decoration: none;
     color: #ffffff;
@@ -19,6 +27,12 @@ a:hover {
     color: #33FF33;
 }
 
+h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #33FF33;
+    margin-bottom: 15px;
+}
 
 header {
     display: flex;
@@ -28,32 +42,17 @@ header {
     border-bottom: 1px solid #ffffff;
 }
 
-ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 40px;
-}
-
 main {
     max-width: 1200px;
     margin: 40px auto;
-    padding: 0 20px;
-}
-
-h2 {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    color: #33FF33;
-    margin-bottom: 15px;
+    padding: 0 15px;
 }
 
 #sobre {
     display: grid;
-    grid-template-columns: 3fr 4fr;
-    gap: 80px;
-    padding-bottom: 40px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 30px;
 }
 
 #sobre>div:first-child {
@@ -75,11 +74,24 @@ h2 {
 #sobre h1 {
     font-size: 1.5em;
     margin: 10px 0 20px 0;
+    text-align: center; 
 }
 
 #sobre section {
     margin-top: 30px;
 }
+
+.center-align {
+    text-align: center;
+}
+
+.ul-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+}
+
 
 .tecnologias {
     font-size: 50px;
@@ -96,17 +108,12 @@ h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    color: #00FF00;
+    transition: color 0.3s;
 }
 
-.center-align {
-    text-align: center;
-}
-
-.ul-vertical {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 20px;
+.tecnologias li:hover {
+    color: #33FF33;
 }
 
 #projetos h2 {
@@ -119,8 +126,8 @@ h2 {
 
 #projetos>div {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 25px;
 }
 
 #projetos article {
@@ -176,7 +183,6 @@ h2 {
     margin: 0;
 }
 
-
 footer {
     padding: 40px 20px 20px;
     text-align: center;
@@ -193,12 +199,12 @@ footer h2 {
 footer div {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 30px;
     margin-bottom: 20px;
 }
 
 footer div a {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #00FF00;
 }
 
@@ -212,39 +218,6 @@ footer p {
     font-size: 0.8em;
     color: #90EE90;
 }
-
-main {
-    padding: 0 15px;
-}
-
-#sobre {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding-bottom: 30px;
-}
-
-#sobre>div:first-child {
-    align-items: center;
-}
-
-#sobre h1 {
-    text-align: center;
-}
-
-#projetos>div {
-    grid-template-columns: 1fr;
-    gap: 25px;
-}
-
-footer div {
-    gap: 30px;
-}
-
-footer div a {
-    font-size: 2em;
-}
-
-
 @media (min-width: 576px) {
 
     #sobre {
@@ -253,11 +226,11 @@ footer div a {
     }
 
     #sobre>div:first-child {
-        align-items: center;
+        align-items: flex-start; 
     }
 
     #sobre h1 {
-        text-align: center;
+        text-align: left;
     }
 
     #projetos>div {
@@ -268,8 +241,12 @@ footer div a {
     header nav ul {
         gap: 20px;
     }
+
+    footer div a {
+        font-size: 2.2em;
+    }
 }
-/* 3. Tablets e pequenos laptops (a partir de 768px) */
+
 @media (min-width: 768px) {
 
     main {
@@ -285,10 +262,13 @@ footer div a {
     header nav ul {
         gap: 40px;
     }
+    
+    footer div a {
+        font-size: 2.5em;
+    }
 }
 
 
-/* 4. Full HD / Desktop (a partir de 1024px) */
 @media (min-width: 1024px) {
 
     main {
@@ -303,7 +283,6 @@ footer div a {
 }
 
 
-/* 5. 2K e 4K (a partir de 1440px) */
 @media (min-width: 1440px) {
 
     main {
