@@ -7,6 +7,19 @@ body {
     min-height: 100vh;
 }
 
+a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #33FF33;
+}
+
+
 header {
     display: flex;
     justify-content: center;
@@ -23,22 +36,17 @@ ul {
     gap: 40px;
 }
 
-a {
-    text-decoration: none;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 1.1em;
-    transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-    color: #33FF33;
-}
-
 main {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
+}
+
+h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #33FF33;
+    margin-bottom: 15px;
 }
 
 #sobre {
@@ -48,10 +56,10 @@ main {
     padding-bottom: 40px;
 }
 
-#sobre > div:first-child {
+#sobre>div:first-child {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .imagem-perfil {
@@ -62,6 +70,32 @@ main {
     background-image: url('img/eu.webp');
     background-size: cover;
     background-position: center;
+}
+
+#sobre h1 {
+    font-size: 1.5em;
+    margin: 10px 0 20px 0;
+}
+
+#sobre section {
+    margin-top: 30px;
+}
+
+.tecnologias {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 20px auto;
+}
+
+.tecnologias li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .center-align {
@@ -75,23 +109,6 @@ main {
     padding-left: 20px;
 }
 
-#sobre h1 {
-    font-size: 1.5em;
-    margin: 10px 0 20px 0;
-}
-
-#sobre section {
-    margin-bottom: 30px;
-}
-
-#sobre h2 {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    color: #33FF33;
-    margin-bottom: 15px;
-}
-
-
 #projetos h2 {
     text-align: left;
     margin-bottom: 40px;
@@ -100,7 +117,7 @@ main {
     text-transform: uppercase;
 }
 
-#projetos > div {
+#projetos>div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -116,6 +133,12 @@ main {
 #projetos article:hover {
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
     transform: translateY(-5px);
+}
+
+#projetos article a {
+    color: inherit;
+    text-transform: none;
+    display: block;
 }
 
 #projetos article div:first-child {
@@ -143,6 +166,8 @@ main {
     font-size: 1.1em;
     margin: 0 0 5px 0;
     color: #33FF33;
+    display: flex;
+    gap: 10px;
 }
 
 #projetos article p {
@@ -151,8 +176,9 @@ main {
     margin: 0;
 }
 
+
 footer {
-    padding: 0px 20px;
+    padding: 40px 20px 20px;
     text-align: center;
     border-top: 1px solid #00FF00;
     margin-top: 60px;
@@ -161,20 +187,19 @@ footer {
 footer h2 {
     font-size: 1.5em;
     color: #00FF00;
+    margin-bottom: 25px;
 }
 
 footer div {
     display: flex;
     justify-content: center;
     gap: 50px;
+    margin-bottom: 20px;
 }
 
-
 footer div a {
-    font-size: 2.5em; 
-    text-decoration: none;
+    font-size: 2.5em;
     color: #00FF00;
-    transition: all 0.3s ease;
 }
 
 footer div a:hover {
@@ -185,5 +210,115 @@ footer div a:hover {
 
 footer p {
     font-size: 0.8em;
-    color: #ffffff;
+    color: #90EE90;
+}
+
+main {
+    padding: 0 15px;
+}
+
+#sobre {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+#sobre>div:first-child {
+    align-items: center;
+}
+
+#sobre h1 {
+    text-align: center;
+}
+
+#projetos>div {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+footer div {
+    gap: 30px;
+}
+
+footer div a {
+    font-size: 2em;
+}
+
+
+@media (min-width: 576px) {
+
+    #sobre {
+        grid-template-columns: 1fr 2fr;
+        gap: 60px;
+    }
+
+    #sobre>div:first-child {
+        align-items: center;
+    }
+
+    #sobre h1 {
+        text-align: center;
+    }
+
+    #projetos>div {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    header nav ul {
+        gap: 20px;
+    }
+}
+/* 3. Tablets e pequenos laptops (a partir de 768px) */
+@media (min-width: 768px) {
+
+    main {
+        max-width: 900px;
+        padding: 0 30px;
+    }
+
+    #projetos>div {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    header nav ul {
+        gap: 40px;
+    }
+}
+
+
+/* 4. Full HD / Desktop (a partir de 1024px) */
+@media (min-width: 1024px) {
+
+    main {
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+
+    #sobre {
+        grid-template-columns: 3fr 4fr;
+        gap: 80px;
+    }
+}
+
+
+/* 5. 2K e 4K (a partir de 1440px) */
+@media (min-width: 1440px) {
+
+    main {
+        max-width: 1400px;
+    }
+
+    body {
+        font-size: 1.1em;
+    }
+
+    header nav ul li a {
+        font-size: 1.2em;
+    }
+
+    footer div a {
+        font-size: 3em;
+    }
 }
