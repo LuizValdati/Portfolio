@@ -23,13 +23,6 @@ Este portfólio foi construído usando as seguintes tecnologias de desenvolvimen
 * **CSS3:** Estilização e gerenciamento de layout (Flexbox e Grid) e responsividade (Media Queries).
 * **Font Awesome:** Biblioteca de ícones utilizada para representar tecnologias (como Git, HTML5, CSS3, JavaScript, Figma) e links de contato (email, GitHub, LinkedIn).
 
-## 📂 Estrutura de Arquivos
-
-A estrutura do projeto inclui os seguintes arquivos principais:
-
-/ ├── index.html # Estrutura principal da página ├── style.css # Estilos e responsividade da interface ├── img/ # Diretório para imagens de perfil e thumbnails dos projetos │ ├── eu.webp # Imagem de perfil │ ├── DescubraSC.png # Thumbnail do Projeto 1 │ ├── Yeti.png # Thumbnail do Projeto 2 │ └── TGOJS.png # Thumbnail do Projeto 3 └── fontawesome/ # Diretório contendo os arquivos CSS e webfonts do Font Awesome
-
-
 ## 🚀 Projetos em Destaque
 
 | Nome do Projeto | Tecnologias | Descrição |
