@@ -34,3 +34,112 @@ a {
 a:hover {
     color: #33FF33;
 }
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#sobre {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: 80px;
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed #00FF00;
+}
+
+/* Coluna da Esquerda: Imagem e Informações Chave */
+#sobre > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Estilo para o espaço reservado à Imagem de Perfil */
+.imagem-perfil {
+    width: 100%;
+    padding-top: 100%;
+    border: 2px solid #00FF00;
+    margin-bottom: 20px;
+    background-image: url('img/eu.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.ul-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+#sobre h1 {
+    font-size: 1.5em;
+    margin: 10px 0 20px 0;
+}
+
+#sobre section {
+    margin-bottom: 30px;
+}
+
+#sobre h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #33FF33;
+    margin-bottom: 15px;
+}
+
+
+#projetos h2 {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 1.8em;
+    color: #00FF00;
+    text-transform: uppercase;
+}
+
+#projetos > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#projetos article {
+    border: 2px solid #00FF00;
+    padding: 15px;
+    background-color: #0a0a0a;
+    transition: all 0.3s ease;
+}
+
+#projetos article:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+#projetos article div:first-child {
+    width: 100%;
+    padding-top: 60%;
+    margin-bottom: 15px;
+    border: 1px solid #00FF00;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+}
+
+#projetos article h3 {
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+    color: #33FF33;
+}
+
+#projetos article p {
+    font-size: 0.9em;
+    color: #90EE90;
+    margin: 0;
+}
